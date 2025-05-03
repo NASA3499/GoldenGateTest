@@ -29,6 +29,7 @@ header {
         margin-bottom: 10px;
     }
 
+
 nav ul {
     list-style: none;
     display: flex;
@@ -46,6 +47,57 @@ nav ul {
             font-weight: bold;
         }
 
+/* Basic Navbar Layout */
+
+.navbar {
+    list-style: none;
+    display: flex;
+    background-color: #2d7a48;
+    padding: 0;
+    margin: 0;
+}
+
+    .navbar > li {
+        position: relative;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+    }
+
+        .navbar a:hover {
+            background-color: #25663a;
+        }
+
+/* Dropdown */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+    .dropdown-content li a {
+        padding: 0.75rem 1rem;
+        display: block;
+        color: white;
+    }
+
+        .dropdown-content li a:hover {
+            background-color: #2d6b35;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 .hero {
     background: url('images/logo.png') no-repeat center center/cover;
     color: #fff;
@@ -57,6 +109,10 @@ nav ul {
         font-size: 2.5em;
         margin-bottom: 10px;
     }
+
+#projects img {
+    max-width: 10em;
+}
 
 .about, .services, .news, .contact {
     padding: 60px 0;

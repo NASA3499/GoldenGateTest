@@ -47,7 +47,7 @@ nav ul {
             font-weight: bold;
         }
 
-/* Basic Navbar Layout */
+/* Navbar Layout */
 
 .navbar {
     list-style: none;
@@ -98,6 +98,8 @@ nav ul {
     display: block;
 }
 
+/* Hero */
+
 .hero {
     background: url('images/logo.png') no-repeat center center/cover;
     color: #fff;
@@ -110,9 +112,239 @@ nav ul {
         margin-bottom: 10px;
     }
 
+/* Side Nav */
+
+.side-nav {
+    float: right;
+    min-width: 15%;
+    margin: 0 1em;
+}
+
+/* img control */
+
+#district img {
+    display: block;
+    margin: 1em auto;
+    max-width: 40%;
+}
+
 #projects img {
     max-width: 10em;
 }
+
+/* Projects Page */
+
+.page-title {
+    font-size: 2rem;
+    color: #004d40;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.project-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+    .project-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+.project-details {
+    padding: 1rem;
+}
+
+    .project-details h3 {
+        margin-top: 0;
+        color: #00695c;
+    }
+
+/* Board Page */
+
+.board-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.member-card {
+    background: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .member-card img {
+        width: 100%;
+        height: auto;
+    }
+
+.member-info {
+    padding: 1rem;
+}
+
+.board-meetings,
+.meeting-minutes {
+    margin-bottom: 2rem;
+}
+
+    .meeting-minutes ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+    }
+
+    .meeting-minutes a {
+        color: #0054a6;
+        text-decoration: none;
+    }
+
+        .meeting-minutes a:hover {
+            text-decoration: underline;
+        }
+
+/* === Important Public Notice Section === */
+
+.notice {
+    background-color: #fef3c7; /* Light yellow for visibility */
+    border-left: 6px solid #fbbf24; /* Amber border for emphasis */
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+    .notice h2 {
+        color: #b45309;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .notice p {
+        font-size: 1rem;
+        color: #4b5563;
+        margin-bottom: 1rem;
+    }
+
+    .notice a {
+        display: inline-block;
+        background-color: #2563eb;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+        .notice a:hover {
+            background-color: #1e40af;
+        }
+
+/* === About Us Section === */
+
+.about {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .about h2 {
+        font-size: 1.6rem;
+        color: #1f2937;
+        margin-bottom: 1rem;
+    }
+
+    .about p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #4b5563;
+    }
+
+/* === Services Section === */
+
+.services {
+    background-color: #f9fafb;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 8px;
+}
+
+    .services h3 {
+        font-size: 1.5rem;
+        color: #111827;
+        margin-bottom: 1rem;
+    }
+
+    .services ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+    }
+
+    .services li {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: #374151;
+    }
+
+/* === Contact Section === */
+
+.contact {
+    background-color: #e5e7eb;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 8px;
+}
+
+    .contact h4 {
+        font-size: 1.4rem;
+        color: #1f2937;
+        margin-bottom: 1rem;
+    }
+
+    .contact p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #374151;
+    }
+
+/* === Responsive adjustments === */
+
+@media (max-width: 768px) {
+    .notice, .about, .services, .contact {
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+/* Initial index.html style */
 
 .about, .services, .news, .contact {
     padding: 60px 0;

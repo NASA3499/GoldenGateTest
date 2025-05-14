@@ -114,6 +114,17 @@ nav ul {
     display: block;
 }
 
+/* Only apply on touch devices - implements JS for navigation */
+@media (hover: none) and (pointer: coarse) {
+    .dropdown-content {
+        display: none;
+    }
+
+    .dropdown.open .dropdown-content {
+        display: block;
+    }
+}
+
 /* Hero */
 
 .hero::before {

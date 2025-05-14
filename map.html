@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta http-equiv="" -->
+
     <!-- SEO -->
     <meta name="keywords" content="Golden Gate Irrigation, Irrigation, District, Caldwell, Idaho, Outages">
     <meta name="description" content="Golden Gate Irrigation provides expert irrigation services to the Treasure Valley.">
@@ -22,71 +23,89 @@
     <!-- <meta property="og:image" content="" -->
 
     <title>District Map | Golden Gate Irrigation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>Golden Gate Irrigation</h1>
             <nav>
                 <ul class="navbar">
-                    <li><a href="index.html">Home</a></li>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
                     <li class="dropdown">
-                        <a href="outages.html" class="dropbtn">News</a>
+                        <a href="index.html#notice" class="dropbtn">News ▾</a>
+
                         <ul class="dropdown-content">
+                            <li><a href="news.html">Latest News & Projects</a></li>
                             <li><a href="outages.html">Outages</a></li>
                             <li><a href="dig.html">Dig Precautions</a></li>
                         </ul>
                     </li>
+
                     <li class="dropdown">
-                        <a href="#about" class="dropbtn">About Us</a>
+                        <a href="index.html#about" class="dropbtn, active">About Us ▾</a>
+
                         <ul class="dropdown-content">
                             <li><a href="map.html">District Map</a></li>
                             <li><a href="board.html">Board Meetings</a></li>
                         </ul>
                     </li>
+
                     <li class="dropdown">
-                        <a href="" class="dropbtn">Services</a>
+                        <a href="index.html#contact" class="dropbtn">Contact Us ▾</a>
+
                         <ul class="dropdown-content">
-                            <li><a href="projects.html">Projects</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
                             <li><a href="taxes.html">Delinquent Taxes</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">Contact Us</a></li>
+
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <div class="container">
+        <div class="hero-content">
             <h2>Reliable Irrigation Solutions for Idaho</h2>
             <p>Serving the Treasure Valley since 1904</p>
         </div>
     </section>
 
-    <section class="side-nav">
-        <div class="container">
-            <h2>About Us</h2>
-            <p><a href="map.html">District Map</a></p>
-            <p><a href="board.html">Board Meetings</a></p>
-        </div>
-    </section>
+    <main>
+        <!--
+        <section class="side-nav">
+            <div class="container">
+                <h2>About Us</h2>
+                <p><a href="map.html">District Map</a></p>
+                <p><a href="board.html">Board Meetings</a></p>
+            </div>
+        </section>
+        -->
 
-    <section id="district" class="district">
-        <div class="container">
-            <h2>District Map</h2>
-            <p>
-                Map placement holder. Golden Gate Irrigation services the areas confined by N 14th Ave, W Chicago St, and E Belmont St.
-            </p>
-            <img src="images/District_Map.jpg" alt="District Map">
-        </div>
-    </section>
+        <section id="district" class="district">
+            <div class="container">
+                <h2>District Map</h2>
+                <p>
+                    Golden Gate Irrigation services the areas confined by N 14th Ave, W Chicago St, and E Belmont St. The Idaho Department of Water Resources has a <a href="https://maps.idwr.idaho.gov/agol/IrrigationOrganizations/?marker=-116.68683834096878%2C43.673979019319766%2C%2C%2C%2C&markertemplate=%7B%22title%22%3A%22%22%2C%22longitude%22%3A-116.68683834096878%2C%22latitude%22%3A43.673979019319766%2C%22isIncludeShareUrl%22%3Atrue%7D&level=15">map</a> showing the district boundary.
+                </p>
+                <img src="images/District_Map.jpg" alt="District Map">
+            </div>
+        </section>
+
+    </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Joel Thorne. All rights reserved. | Version 1.0.0</p>
         </div>
     </footer>
+
 </body>
 </html>

@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const dropdownToggles = document.querySelectorAll(".dropbtn");
 
     dropdownToggles.forEach(toggle => {
-        let tapped = false;
-
         toggle.addEventListener("touchstart", function (e) {
             const parent = this.parentElement;
             const isOpen = parent.classList.contains("open");
@@ -18,11 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         other.parentElement.classList.remove("open");
                     }
                 });
-
-                // Reset after a short time
-                setTimeout(() => {
-                    tapped = false;
-                }, 1000);
             }
         });
 

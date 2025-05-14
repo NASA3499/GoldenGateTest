@@ -6,9 +6,15 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     color: #333;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .container {
@@ -29,6 +35,21 @@ header {
         margin-bottom: 10px;
     }
 
+.page-title {
+    font-size: 2rem;
+    color: #004d40;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Navbar Layout */
 
 nav ul {
     list-style: none;
@@ -37,28 +58,13 @@ nav ul {
     flex-wrap: wrap;
 }
 
-    nav ul li {
-        margin: 0 15px;
-    }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-/* Navbar Layout */
-
 .navbar {
-    list-style: none;
-    display: flex;
     background-color: #2d7a48;
-    padding: 0;
-    margin: 0;
 }
 
     .navbar > li {
         position: relative;
+        margin: 0 15px;
     }
 
     .navbar a {
@@ -66,13 +72,23 @@ nav ul {
         padding: 1rem;
         color: white;
         text-decoration: none;
+        font-weight: bold;
     }
 
-        .navbar a:hover {
-            background-color: #25663a;
-        }
+    .navbar > li > a:hover {
+        border-bottom: 2px solid #25663a; /* necessary since the active link section has a border */
+    }
 
-/* Dropdown */
+    .navbar > li > a.active { /* highlights and underlines the active link section */
+        color: #d9931f; /* warm amber color */
+        border-bottom: 2px solid #d9931f;
+    }
+
+    .navbar a:hover {
+        background-color: #25663a; /* alternate color #004d40 */
+    }
+
+/*  Navbar Dropdown */
 
 .dropdown-content {
     display: none;
@@ -100,12 +116,34 @@ nav ul {
 
 /* Hero */
 
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0; /* can use top/left/right/bottom instead */
+    background: rgba(0, 0, 0, 0.6); /* adds transparency */
+    /*z-index: 0;*/
+}
+
 .hero {
-    background: url('images/logo.png') no-repeat center center/cover;
+    position: relative;
+    background: url('images/logo.png') no-repeat center/cover; /* semi-matching color: #26577C */
+    /* center/contain is another option to try */
+    background-color: #0c2a3a; /* backup background */
+    min-height: 400px;
+    display: flex;
     color: #fff;
     padding: 100px 0;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
+
+    .hero-content {
+        position: relative;
+        /*z-index: 1;*/
+        max-width: 800px;
+        padding: 1rem;
+    }
 
     .hero h2 {
         font-size: 2.5em;
@@ -114,11 +152,13 @@ nav ul {
 
 /* Side Nav */
 
+/*
 .side-nav {
     float: right;
     min-width: 15%;
     margin: 0 1em;
 }
+*/
 
 /* img control */
 
@@ -132,21 +172,7 @@ nav ul {
     max-width: 10em;
 }
 
-/* Projects Page */
-
-.page-title {
-    font-size: 2rem;
-    color: #004d40;
-    margin-top: 2rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-}
-
-.intro-text {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #666;
-}
+/* News Page - Projects Section */
 
 .project-grid {
     display: grid;
@@ -228,7 +254,7 @@ nav ul {
             text-decoration: underline;
         }
 
-/* === Important Public Notice Section === */
+/* === index.html - Important Public Notice Section === */
 
 .notice {
     background-color: #fef3c7; /* Light yellow for visibility */
@@ -284,6 +310,10 @@ nav ul {
         font-size: 1rem;
         line-height: 1.6;
         color: #4b5563;
+    }
+
+    .about #report {
+        color: red;
     }
 
 /* === Services Section === */
